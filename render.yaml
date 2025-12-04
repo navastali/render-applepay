@@ -6,10 +6,3 @@ services:
     dockerfilePath: Dockerfile
     plan: free
     autoDeploy: true
-    envVars:
-      - key: STRIPE_SECRET_KEY
-        scope: env
-      - key: REACT_APP_STRIPE_PUBLISHABLE_KEY
-        scope: env
-      - key: STRIPE_WEBHOOK_SECRET
-        scope: env
