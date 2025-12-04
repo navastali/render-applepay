@@ -1,7 +1,7 @@
 
 services:
   - type: web
-    name: render-applepay-java8
+    name: render-applepay
     env: docker
     dockerfilePath: Dockerfile
     plan: free
