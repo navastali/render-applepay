@@ -19,7 +19,7 @@ COPY --from=frontend-build /app/frontend/build ./src/main/resources/static
 RUN mvn -f ./pom.xml -B -DskipTests package
 
 # Stage 3: Runtime image (smaller)
-FROM openjdk:8-jre-alpine
+FROM eclipse-temurin:8-jre
 WORKDIR /app
 COPY --from=backend-build /app/target/*.jar app.jar
 ENV PORT 8080
